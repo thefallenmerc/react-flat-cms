@@ -1,1 +1,4 @@
 /node_modules
+/src/Router.js
+/src/routes.js
+/src/pages/*
