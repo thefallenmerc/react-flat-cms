@@ -1,0 +1,23 @@
+import React from 'react';
+import { Remarkable } from 'remarkable';
+
+export default class __classname__ extends React.Component {
+    constructor(props) {
+        super(props);
+        this.md = `__md__`;
+        this.tags = __tags__;
+    }
+    getRawHTML() {
+        const md = new Remarkable();
+        return {
+            __html: md.render(decodeURIComponent(this.md))
+        }
+    }
+    render() {
+        return (
+            <div
+                className="__classname__ PageContent"
+                dangerouslySetInnerHTML={this.getRawHTML()}></div>
+        );
+    }
+}

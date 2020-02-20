@@ -1,0 +1,27 @@
+import React from 'react';
+import { Remarkable } from 'remarkable';
+
+export default class TypescriptBasedValidatorPage extends React.Component {
+    constructor(props) {
+        super(props);
+        this.md = `File%3A%20%60C%3A%5CWorkspace%5CPlayground%5CNode%5Cvalidator%5Csrc%5Ccontrollers%5Capicontroller.ts%60%0D%0A%60%60%60typescript%0D%0Aimport%20%7B%20Request%2C%20Response%20%7D%20from%20%22express%22%3B%0D%0A%0D%0Aimport%20LoginValidator%20from%20%22..%2Fvalidators%2Flogin_validator%22%3B%0D%0A%0D%0Aexport%20default%20class%20ApiController%20%7B%0D%0A%20%20%20%20public%20static%20login(req%3A%20Request%2C%20res%3A%20Response)%20%7B%0D%0A%20%20%20%20%20%20%20%20const%20validator%20%3D%20new%20LoginValidator(req)%3B%0D%0A%0D%0A%20%20%20%20%20%20%20%20if%20(validator.fails())%20%7B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20res.json(%7B%20message%3A%20%22lol%22%2C%20errors%3A%20validator.errors%20%7D)%3B%0D%0A%20%20%20%20%20%20%20%20%7D%0D%0A%20%20%20%20%20%20%20%20return%20res.json(%7B%20message%3A%20%22lol%22%2C%20data%3A%20validator.validated%2C%20fails%3A%20validator.fails()%20%7D)%3B%0D%0A%20%20%20%20%7D%0D%0A%7D%0D%0A%0D%0A%60%60%60%0D%0A%0D%0A%0D%0AFile%3A%20%60C%3A%5CWorkspace%5CPlayground%5CNode%5Cvalidator%5Csrc%5Cindex.ts%60%0D%0A%60%60%60typescript%0D%0Aimport%20express%2C%20%7B%20Request%2C%20Response%20%7D%20from%20%22express%22%3B%0D%0A%0D%0Aimport%20ApiController%20from%20%22.%2Fcontrollers%2Fapicontroller%22%3B%0D%0A%0D%0Aconst%20app%20%3D%20express()%3B%0D%0A%0D%0Aapp.use(express.json())%3B%0D%0Aapp.use(express.urlencoded(%7B%20extended%3A%20false%20%7D))%3B%0D%0A%0D%0Aapp.use(%22%2Fapi%2Flogin%22%2C%20ApiController.login)%3B%0D%0A%0D%0Aapp.use(%22**%22%2C%20(req%3A%20Request%2C%20res%3A%20Response)%20%3D%3E%20%7B%0D%0A%20%20%20%20res.json(%7B%20message%3A%20%22testvalidations%22%20%7D)%3B%0D%0A%7D)%3B%0D%0A%0D%0Aapp.listen(1200)%3B%0D%0A%0D%0A%60%60%60%0D%0A%0D%0A%0D%0AFile%3A%20%60C%3A%5CWorkspace%5CPlayground%5CNode%5Cvalidator%5Csrc%5Cvalidators%5Clogin_validator.ts%60%0D%0A%60%60%60typescript%0D%0Aimport%20%7B%20Request%20%7D%20from%20%22express%22%3B%0D%0Aimport%20Validator%20from%20%22.%2Fvalidator%22%3B%0D%0A%0D%0Aexport%20default%20class%20LoginValidator%20extends%20Validator%20%7B%0D%0A%0D%0A%20%20%20%20protected%20rules%20%3D%20%7B%0D%0A%20%20%20%20%20%20%20%20email%3A%20%22email%7Crequired%22%2C%0D%0A%20%20%20%20%20%20%20%20password%3A%20%22string%7Crequired%22%2C%0D%0A%20%20%20%20%7D%3B%0D%0A%0D%0A%7D%0D%0A%0D%0A%60%60%60%0D%0A%0D%0A%0D%0AFile%3A%20%60C%3A%5CWorkspace%5CPlayground%5CNode%5Cvalidator%5Csrc%5Cvalidators%5Cvalidator.ts%60%0D%0A%60%60%60typescript%0D%0Aimport%20%7B%20Request%20%7D%20from%20%22express%22%3B%0D%0Aimport%20ValidatorJS%20from%20%22validatorjs%22%3B%0D%0A%0D%0Aexport%20default%20class%20Validator%20%7B%0D%0A%0D%0A%20%20%20%20public%20validated%3A%20object%3B%0D%0A%0D%0A%20%20%20%20protected%20isValidated%20%3D%20false%3B%0D%0A%20%20%20%20protected%20messages%3A%20object%3B%0D%0A%20%20%20%20protected%20rules%3A%20object%3B%0D%0A%20%20%20%20protected%20request%3A%20Request%3B%0D%0A%20%20%20%20protected%20validator%3A%20ValidatorJS%3B%0D%0A%0D%0A%20%20%20%20constructor(request%3A%20Request)%20%7B%0D%0A%20%20%20%20%20%20%20%20this.request%20%3D%20request%3B%0D%0A%20%20%20%20%7D%0D%0A%0D%0A%20%20%20%20public%20fails()%20%7B%0D%0A%20%20%20%20%20%20%20%20this.validate()%3B%0D%0A%20%20%20%20%20%20%20%20return%20this.validator.fails()%3B%0D%0A%20%20%20%20%7D%0D%0A%0D%0A%20%20%20%20public%20passes()%20%7B%0D%0A%20%20%20%20%20%20%20%20this.validate()%3B%0D%0A%20%20%20%20%20%20%20%20return%20this.validator.passes()%3B%0D%0A%20%20%20%20%7D%0D%0A%0D%0A%20%20%20%20get%20errors()%3A%20object%20%7B%0D%0A%20%20%20%20%20%20%20%20this.validate()%3B%0D%0A%20%20%20%20%20%20%20%20return%20this.validator.errors.all()%3B%0D%0A%20%20%20%20%7D%0D%0A%0D%0A%20%20%20%20protected%20validate()%20%7B%0D%0A%20%20%20%20%20%20%20%20if%20(!this.isValidated)%20%7B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20this.validator%20%3D%20new%20ValidatorJS(this.request.body%2C%20this.rules%2C%20this.messages)%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20this.validated%20%3D%20%7B%7D%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20for%20(const%20rule%20in%20this.rules)%20%7B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20(this.rules.hasOwnProperty(rule))%20%7B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20this.validated%5Brule%5D%20%3D%20this.request.body%5Brule%5D%3B%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20this.isValidated%20%3D%20true%3B%0D%0A%20%20%20%20%20%20%20%20%7D%0D%0A%20%20%20%20%7D%0D%0A%0D%0A%7D%0D%0A%0D%0A%60%60%60%0D%0A`;
+        this.tags = [
+  "node",
+  "express",
+  "typescript based validator"
+];
+    }
+    getRawHTML() {
+        const md = new Remarkable();
+        return {
+            __html: md.render(decodeURIComponent(this.md))
+        }
+    }
+    render() {
+        return (
+            <div
+                className="TypescriptBasedValidatorPage PageContent"
+                dangerouslySetInnerHTML={this.getRawHTML()}></div>
+        );
+    }
+}
