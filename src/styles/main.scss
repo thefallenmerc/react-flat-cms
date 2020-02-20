@@ -5,7 +5,7 @@ $darker: #232323;
 $light: #aaa;
 $accent: orangered;
 
-$base-font: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+$base-font: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
 
 html {
   font-family: $base-font;
@@ -69,10 +69,22 @@ html {
             }
           }
         }
+        .InfoBox {
+          color: $light;
+        }
       }
     }
   }
   @import "page";
+  .FourOFour {
+    text-align: center;
+    color: $light;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
 }
 html,
 body {
@@ -82,23 +94,24 @@ body {
 }
 
 /* width */
-.LinkBox::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 5px;
+  height: 5px;
 }
 
 /* Track */
-.LinkBox::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   background: $light;
 }
 
 /* Handle */
-.LinkBox::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background: $dark;
   transition: all 0.4s;
 }
 
 /* Handle on hover */
-.LinkBox::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
   background: $dark;
 }
 

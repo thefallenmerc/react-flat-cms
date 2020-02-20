@@ -1,23 +1,31 @@
 import React from 'react';
 import { Remarkable } from 'remarkable';
+import  { Link } from 'react-router-dom';
 
 export default class __classname__ extends React.Component {
     constructor(props) {
         super(props);
         this.md = `__md__`;
         this.tags = __tags__;
-    }
-    getRawHTML() {
+        this.title = "__title__";
         const md = new Remarkable();
-        return {
-            __html: md.render(decodeURIComponent(this.md))
-        }
+        this.state = {
+            innerHtml: {
+                __html: md.render(decodeURIComponent(this.md))
+            }
+        };
     }
+    componentDidMount() {
+        window.Prism.highlightAll();
+    }
+
     render() {
         return (
-            <div
-                className="__classname__ PageContent"
-                dangerouslySetInnerHTML={this.getRawHTML()}></div>
+            <div className="__classname__ PageContent">
+                <div className="Title">{this.title}</div>
+                <div dangerouslySetInnerHTML={this.state.innerHtml}></div>
+                <Link className="HomeButton" to="/">Home</Link>
+            </div>
         );
     }
 }

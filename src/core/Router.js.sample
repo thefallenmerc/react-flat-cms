@@ -1,6 +1,8 @@
 import { Switch, Route } from 'react-router-dom';
 import React from 'react';
 
+import FourOFour from './components/FourOFour';
+
 __imports__
 
 export default class Router extends React.Component {
@@ -8,6 +10,7 @@ export default class Router extends React.Component {
         return (
             <Switch>
 __routelist__
+                <Route path="/:page" render={props => <FourOFour />} />
             </Switch>
         );
     }

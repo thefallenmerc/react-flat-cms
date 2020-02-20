@@ -2,5 +2,22 @@
   .PageContent {
     padding: 1rem;
     color: $light;
+    .Title {
+      font-size: 2rem;
+      text-align: center;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
   }
+}
+
+.HomeButton {
+  display: block;
+  width: min-content;
+  margin: 1rem auto;
+  color: #232323;
+  background-color: #aaa;
+  border-radius: 4px;
+  text-decoration: none;
+  padding: 10px 20px;
 }

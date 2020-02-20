@@ -27,10 +27,12 @@ export default function Dashboard() {
         <div className="Dashboard">
             <div className="SearchContainer">
                 <div className="SearchBar">
-                    <input value={query} onChange={searchList} onKeyDown={keyMap} />
+                    <input value={query} onChange={searchList} onKeyDown={keyMap} placeholder="Search..." />
                 </div>
                 <div className="LinkBox">
                     {
+                        (routes.length > 0)
+                        ?
                         routes.map((route, index) => {
                             return (
                                 <div className="Link" key={index}>
@@ -45,6 +47,12 @@ export default function Dashboard() {
                                 </div>
                             )
                         })
+                        :
+                        query.length > 0
+                        ?
+                        <div className="InfoBox">No match found...</div>
+                        :
+                        <div className="InfoBox">Nothing to explore...</div>
                     }
                 </div>
             </div>

@@ -47,7 +47,7 @@ exec("npm run clear:page")
             const itemPath = path.join(dirToScan, item);
             const itemPathDest = path.join(pageDir, item);
             // Make the jsx from template
-            const jsxPath = makeFile(itemPath, itemPathDest, removeExt(item).replace(/_/g, ' ').toLowerCase().split('/'));
+            const jsxPath = makeFile(itemPath, itemPathDest, titleName(item), removeExt(item).replace(/_/g, ' ').toLowerCase().split('/'));
             console.log(chalk.cyan('[Page Created]: ' + getRelative(jsxPath)));
             // Add file detail to router
             componentRoute.push({
@@ -114,13 +114,14 @@ function makeRouter() {
 
 }
 
-function makeFile(itemPath, itemPathDest, tags = []) {
+function makeFile(itemPath, itemPathDest, title = 'Flat React', tags = []) {
     createFileIfNotExists(itemPathDest);
     const className = camelCase(getFileName(itemPath));
     const md = fs.readFileSync(itemPath, { encoding: 'utf8' });
     const content = template
         .replace(/(__classname__)/g, className)
         .replace(/__tags__/g, JSON.stringify(tags, null, 2))
+        .replace(/__title__/g, title)
         .replace(/(__md__)/g, encodeURIComponent(md));
     const jsxPath = jsx(itemPathDest);
     fs.writeFileSync(jsxPath, content, { encoding: 'utf8' });
