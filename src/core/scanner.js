@@ -143,7 +143,7 @@ function getFileName(itemPath) {
 }
 
 function componentName(itemPath) {
-    return camelCase(path.basename(itemPath));
+    return camelCase(itemPath.replace(pageDir, '').split("\\").filter(e => e).join('_')).replace(/[\/\\-_]/g, '');
 }
 
 function titleName(itemPath) {

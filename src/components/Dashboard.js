@@ -24,7 +24,7 @@ export default function Dashboard() {
     }
 
     return (
-        <div className="Dashboard">
+        <div className="Dashboard p-4">
             <div className="SearchContainer">
                 <div className="SearchBar">
                     <input value={query} onChange={searchList} onKeyDown={keyMap} placeholder="Search..." />
