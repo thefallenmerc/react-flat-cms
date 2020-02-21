@@ -40,7 +40,9 @@ export default function Dashboard() {
                                         <span className="LinkTitle">{route.name}</span>
                                         <span className="TagContainer">
                                             {
-                                                route.tags.slice(0, route.tags.length - 1).map((tag, index) => <span className="Tag" key={index}>{tag}</span>)
+                                                route.tags.slice(0, route.tags.length - 1).map((tag, index) => {
+                                                    return <span className="Tag" key={index} onClick={() => { searchList({target: { value: tag}}) }}>{tag}</span>;
+                                                })
                                             }
                                         </span>
                                     </Link>
