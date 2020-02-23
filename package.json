@@ -2,6 +2,7 @@
   "name": "react",
   "version": "0.0.0",
   "private": true,
+  "homepage": "https://thefallenmerc.github.io/react-flat-cms/",
   "dependencies": {
     "@chaharshubhamsingh/dirscanner": "^1.0.1",
     "bootstrap": "^4.4.1",
