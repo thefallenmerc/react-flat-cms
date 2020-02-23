@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/react-flat-cms/static/css/main.a570f9df.chunk.css",
-    "main.js": "/react-flat-cms/static/js/main.08356b0f.chunk.js",
-    "main.js.map": "/react-flat-cms/static/js/main.08356b0f.chunk.js.map",
+    "main.js": "/react-flat-cms/static/js/main.4d1ccf98.chunk.js",
+    "main.js.map": "/react-flat-cms/static/js/main.4d1ccf98.chunk.js.map",
     "runtime-main.js": "/react-flat-cms/static/js/runtime-main.168f20af.js",
     "runtime-main.js.map": "/react-flat-cms/static/js/runtime-main.168f20af.js.map",
     "static/css/2.47e06e2e.chunk.css": "/react-flat-cms/static/css/2.47e06e2e.chunk.css",
     "static/js/2.4ef2728b.chunk.js": "/react-flat-cms/static/js/2.4ef2728b.chunk.js",
     "static/js/2.4ef2728b.chunk.js.map": "/react-flat-cms/static/js/2.4ef2728b.chunk.js.map",
     "index.html": "/react-flat-cms/index.html",
-    "precache-manifest.133880cdefbb2a97633916899d1b04b4.js": "/react-flat-cms/precache-manifest.133880cdefbb2a97633916899d1b04b4.js",
+    "precache-manifest.729185bc5f541e6bb07aa6534269f8b8.js": "/react-flat-cms/precache-manifest.729185bc5f541e6bb07aa6534269f8b8.js",
     "service-worker.js": "/react-flat-cms/service-worker.js",
     "static/css/2.47e06e2e.chunk.css.map": "/react-flat-cms/static/css/2.47e06e2e.chunk.css.map",
     "static/css/main.a570f9df.chunk.css.map": "/react-flat-cms/static/css/main.a570f9df.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.47e06e2e.chunk.css",
     "static/js/2.4ef2728b.chunk.js",
     "static/css/main.a570f9df.chunk.css",
-    "static/js/main.08356b0f.chunk.js"
+    "static/js/main.4d1ccf98.chunk.js"
   ]
 }
