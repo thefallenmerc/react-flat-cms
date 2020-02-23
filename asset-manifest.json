@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.a570f9df.chunk.css",
-    "main.js": "/static/js/main.fe8e1a56.chunk.js",
-    "main.js.map": "/static/js/main.fe8e1a56.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.9f7c15aa.js",
-    "runtime-main.js.map": "/static/js/runtime-main.9f7c15aa.js.map",
-    "static/css/2.47e06e2e.chunk.css": "/static/css/2.47e06e2e.chunk.css",
-    "static/js/2.8e735e22.chunk.js": "/static/js/2.8e735e22.chunk.js",
-    "static/js/2.8e735e22.chunk.js.map": "/static/js/2.8e735e22.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.015794599c3a2a96d25e37d47a614037.js": "/precache-manifest.015794599c3a2a96d25e37d47a614037.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.47e06e2e.chunk.css.map": "/static/css/2.47e06e2e.chunk.css.map",
-    "static/css/main.a570f9df.chunk.css.map": "/static/css/main.a570f9df.chunk.css.map",
-    "static/js/2.8e735e22.chunk.js.LICENSE.txt": "/static/js/2.8e735e22.chunk.js.LICENSE.txt"
+    "main.css": "/react-flat-cms/static/css/main.a570f9df.chunk.css",
+    "main.js": "/react-flat-cms/static/js/main.08356b0f.chunk.js",
+    "main.js.map": "/react-flat-cms/static/js/main.08356b0f.chunk.js.map",
+    "runtime-main.js": "/react-flat-cms/static/js/runtime-main.168f20af.js",
+    "runtime-main.js.map": "/react-flat-cms/static/js/runtime-main.168f20af.js.map",
+    "static/css/2.47e06e2e.chunk.css": "/react-flat-cms/static/css/2.47e06e2e.chunk.css",
+    "static/js/2.4ef2728b.chunk.js": "/react-flat-cms/static/js/2.4ef2728b.chunk.js",
+    "static/js/2.4ef2728b.chunk.js.map": "/react-flat-cms/static/js/2.4ef2728b.chunk.js.map",
+    "index.html": "/react-flat-cms/index.html",
+    "precache-manifest.133880cdefbb2a97633916899d1b04b4.js": "/react-flat-cms/precache-manifest.133880cdefbb2a97633916899d1b04b4.js",
+    "service-worker.js": "/react-flat-cms/service-worker.js",
+    "static/css/2.47e06e2e.chunk.css.map": "/react-flat-cms/static/css/2.47e06e2e.chunk.css.map",
+    "static/css/main.a570f9df.chunk.css.map": "/react-flat-cms/static/css/main.a570f9df.chunk.css.map",
+    "static/js/2.4ef2728b.chunk.js.LICENSE.txt": "/react-flat-cms/static/js/2.4ef2728b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.9f7c15aa.js",
+    "static/js/runtime-main.168f20af.js",
     "static/css/2.47e06e2e.chunk.css",
-    "static/js/2.8e735e22.chunk.js",
+    "static/js/2.4ef2728b.chunk.js",
     "static/css/main.a570f9df.chunk.css",
-    "static/js/main.fe8e1a56.chunk.js"
+    "static/js/main.08356b0f.chunk.js"
   ]
 }
